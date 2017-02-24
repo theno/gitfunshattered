@@ -19,7 +19,6 @@ git-hash-object () { # substitute when the `git` command is not available
 
 
 run-cmd () {
-  cmd=$1
   echo "> $1"
   eval "$1"
 }
