@@ -36,7 +36,7 @@ echo '* https://stackoverflow.com/questions/7225313/how-does-git-compute-file-ha
 echo ''
 echo "## shattered files"
 echo ''
-echo 'Same SHA1 hash, SHA256 hash differs:'
+echo 'Same SHA1 hash, SHA256 hashes differ:'
 echo ''
 for i in {1..2}; do
   if [ ! -f shattered-$i.pdf ]; then

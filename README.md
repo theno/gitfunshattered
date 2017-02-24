@@ -9,15 +9,15 @@ No. Infos:
 
 ## shattered files
 
-Same SHA1 hash, SHA256 hash differs:
+Same SHA1 hash, SHA256 hashes differ:
 
 ```bash
 > wget --no-verbose  https://shattered.it/static/shattered-1.pdf  2>&1
-2017-02-24 15:29:39 URL:https://shattered.it/static/shattered-1.pdf [422435/422435] -> "shattered-1.pdf" [1]
+2017-02-24 15:33:54 URL:https://shattered.it/static/shattered-1.pdf [422435/422435] -> "shattered-1.pdf" [1]
 ```
 ```bash
 > wget --no-verbose  https://shattered.it/static/shattered-2.pdf  2>&1
-2017-02-24 15:29:39 URL:https://shattered.it/static/shattered-2.pdf [422435/422435] -> "shattered-2.pdf" [1]
+2017-02-24 15:33:55 URL:https://shattered.it/static/shattered-2.pdf [422435/422435] -> "shattered-2.pdf" [1]
 ```
 
 ```bash
@@ -43,7 +43,7 @@ SHA1 ID of HEAD
 
 ```bash
 > git log -1 --pretty='%H'
-ffde5a0687439080bec91b8da9e487c1fc43f326
+b20ad9a1badda387d3b09b20a1230b292f5945c3
 ```
 
 git-hash of shattered.pdf
@@ -60,7 +60,7 @@ SHA1 ID of HEAD
 
 ```bash
 > git log -1 --pretty='%H'
-434896c27d5f06061e2d0856cc180f8c2320cdd6
+198b49d19df3a102f5dcfed2cd6b158d8357fcbb
 ```
 
 git-hash of shattered.pdf
