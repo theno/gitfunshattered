@@ -33,10 +33,10 @@ echo '* SHAttered https://shattered.it/'
 echo '  * Code: https://github.com/cr-marcstevens/sha1collisiondetection'
 echo '* "the collision is entirely a non-issue": https://stackoverflow.com/a/9392525'
 echo '* https://stackoverflow.com/questions/7225313/how-does-git-compute-file-hashes'
-
+echo ''
 echo "## shattered files"
 echo ''
-echo 'Same SHA1 hash, SHA256 hash differs.'
+echo 'Same SHA1 hash, SHA256 hash differs:'
 echo ''
 for i in {1..2}; do
   if [ ! -f shattered-$i.pdf ]; then
@@ -88,7 +88,7 @@ echo 'Because git applies a SHA1 not on the file itself but also'
 echo 'incorporates its size:'
 echo ''
 echo '```'
-echo 'git-hash(file) := SHA1("blob &lt;file_size&gt;\0&lt;file_content&gt;")'
+echo 'git-hash(file) := SHA1("blob <file_size>\0<file_content>")'
 echo '```'
 for i in {1..2}; do
   echo -e "\n### shattered-$i.pdf"

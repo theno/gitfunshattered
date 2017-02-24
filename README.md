@@ -6,17 +6,18 @@ No. Infos:
   * Code: https://github.com/cr-marcstevens/sha1collisiondetection
 * "the collision is entirely a non-issue": https://stackoverflow.com/a/9392525
 * https://stackoverflow.com/questions/7225313/how-does-git-compute-file-hashes
+
 ## shattered files
 
-Same SHA1 hash, SHA256 hash differs.
+Same SHA1 hash, SHA256 hash differs:
 
 ```bash
 > wget --no-verbose  https://shattered.it/static/shattered-1.pdf  2>&1
-2017-02-24 15:21:09 URL:https://shattered.it/static/shattered-1.pdf [422435/422435] -> "shattered-1.pdf" [1]
+2017-02-24 15:29:39 URL:https://shattered.it/static/shattered-1.pdf [422435/422435] -> "shattered-1.pdf" [1]
 ```
 ```bash
 > wget --no-verbose  https://shattered.it/static/shattered-2.pdf  2>&1
-2017-02-24 15:21:09 URL:https://shattered.it/static/shattered-2.pdf [422435/422435] -> "shattered-2.pdf" [1]
+2017-02-24 15:29:39 URL:https://shattered.it/static/shattered-2.pdf [422435/422435] -> "shattered-2.pdf" [1]
 ```
 
 ```bash
@@ -42,7 +43,7 @@ SHA1 ID of HEAD
 
 ```bash
 > git log -1 --pretty='%H'
-978a8ec8de67c5f49060fafccb391ed99c7dd299
+ffde5a0687439080bec91b8da9e487c1fc43f326
 ```
 
 git-hash of shattered.pdf
@@ -59,7 +60,7 @@ SHA1 ID of HEAD
 
 ```bash
 > git log -1 --pretty='%H'
-f28fd08028b48f0c8b4e059d97ae464e94531e12
+434896c27d5f06061e2d0856cc180f8c2320cdd6
 ```
 
 git-hash of shattered.pdf
@@ -76,7 +77,7 @@ Because git applies a SHA1 not on the file itself but also
 incorporates its size:
 
 ```
-git-hash(file) := SHA1("blob &lt;file_size&gt;\0&lt;file_content&gt;")
+git-hash(file) := SHA1("blob <file_size>\0<file_content>")
 ```
 
 ### shattered-1.pdf
